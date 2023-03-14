@@ -1,0 +1,30 @@
+:root{
+    --primary-text-color #2F303A;
+    --title-text-color #212121;
+    --accent-color #2196F3;
+}
+body{
+    font-family: 'Roboto';
+    font-style: normal;
+    }
+.list{list-style-type: none;}
+.studia a{color: #212121;}
+.studia a:hover{color: #2196F3;}
+.logo-main{text-decoration: none;}
+.logo-main :hover {color: #2196F3;}
+.site-nav{}
+.site-nav a{color: #212121;}
+a{color: #212121;}
+.site-nav a:hover, 
+.site-nav a:focus{color: ;}
+.auth-nav a{color: ;}
+.hero{
+    width: 1600px;
+    height: 600px;
+    background-color:;
+}
+.hero-title{color: #FFFFFF;}
+p{color:#757575;}
+.section-title{}
+.section{}
+.features-list .title{}
