@@ -56,6 +56,13 @@ margin-left: 93px;}
     text-decoration: none;
     color: var(--black-colour)
 }
+.link:hover{color: var(--ascent-blue-colour);}
+.email{display: flex;}
+.email::before{content: '';
+    width: 16px;
+    height: 12px;
+    margin-right: 10px;
+background-image: url(/img/svg/icons/envelope.svg);}
 .current {
     color: var(--ascent-blue-colour);
 }
@@ -76,7 +83,7 @@ margin-left: 93px;}
     letter-spacing: 0.02em;
 }
 .menu-tel {
-    display: block;
+    display: flex;
     text-decoration: none;
     font-weight: 500;
     font-size: 14px;
@@ -84,18 +91,26 @@ margin-left: 93px;}
     letter-spacing: 0.02em;
     color: var(--primary-grey-colour);
 }
+.menu-tel::before{content: '';
+    width: 10px;
+    height: 16px;
+    margin-right: 10px;
+    background-image: url(/img/svg/icons/smartphone.svg);}
 
 /* Главный экран*/
 .hero {
     max-width: 1600px;
     height: 600px;
+    display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
     margin-left: 0;
     margin-right: 0;
-    background-image: linear-gradient(rgba(0,0,0,0.5));
-    background-image: url(/img/Imgbg.jpg)
+    background: linear-gradient(rgba(47,48,58,0.4), rgba(47,48,58,0.4)), url(/img/Imgbg.jpg)
 }
-
 .hero h1 {
+    margin: 0px;
     font-weight: 900;
     font-size: 44px;
     line-height: 1.36;
@@ -113,11 +128,12 @@ margin-left: 93px;}
     width: 1200px;
     height: 251px;
     margin-left: 215px;
-    margin-top: 94px;}
+    }
 .features-ul{
     display: flex;
     flex-wrap: wrap;
-padding: 0px;}
+padding: 0px;
+margin-top: 65px;}
 .features-ul li {margin-right: 30px;}
 .features-ul .list-item:last-child{margin-right: 0px;}
 .features-tittle {
@@ -129,8 +145,27 @@ padding: 0px;}
     letter-spacing: 0.03em;
     color: var(--black-colour);}
 .list-item {
-    width: 270px;}
-
+    display: flex;
+    flex-direction: column;
+    width: 270px;
+    height: 251px;}
+.list-item::before{
+    content: '';
+    height: 120px;
+    border-radius: 4px;
+    background-color: #F5F4FA;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.list-item:nth-child(1)::before {
+    background-image: url(/img/svg/icons/antenna\ 1.svg);}
+.list-item:nth-child(2)::before {
+    background-image: url(/img/svg/icons/clock\ 1.svg);
+}
+.list-item:nth-child(3)::before {
+    background-image: url(/img/svg/icons/diagram\ 1.svg);
+}
+.list-item:nth-child(4)::before{background-image: url(/img/svg/icons/astronaut\ 1.svg);}
 .features-text {
     font-weight: 400;
     font-size: 14px;
@@ -146,8 +181,9 @@ padding: 0px;}
 }
 
 .btn.primary {
-    
-
+    width: 200px;
+    height: 50px;
+    margin-top: 30px;
     font-weight: 700;
     font-size: 16px;
     line-height: 1.88;
