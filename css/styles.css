@@ -119,6 +119,27 @@ background-image: url(/img/svg/icons/envelope.svg);}
     text-transform: uppercase;
     color: var(--alt-white-colour)
 }
+.backdrop{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.2);}
+.backdrop.is-hidden{
+    opacity: 0; 
+    pointer-events: none;}
+.modal{
+    width: 528px;
+    height: 581px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background: #FFFFFF;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;}
 
 /* Особености */
 .section-tittle {
@@ -138,6 +159,8 @@ background-image: url(/img/svg/icons/envelope.svg);}
 .features-ul li {margin-right: 30px;}
 .features-ul .list-item:last-child{margin-right: 0px;}
 .features-tittle {
+    margin-top: 30px;
+    margin-bottom: 0px;
     font-weight: 700;
     font-size: 14px;
     line-height: 1.14;
@@ -204,8 +227,7 @@ background-image: url(/img/svg/icons/envelope.svg);}
     background-color: #F5F4FA;
     border-radius: 4px;
     border-color: #F5F4FA;
-    font-family: 'Roboto';
-    font-weight: 500;
+    font-weight: 700;
     font-size: 16px;
     line-height: 1.62;
     text-align: center;
@@ -217,6 +239,23 @@ background-image: url(/img/svg/icons/envelope.svg);}
     box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
     border-radius: 4px;
 }
+.btn.modal{
+    
+    width: 200px;
+    height: 50px;
+    margin-top: 40px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.88;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.06em;
+    border-radius: 4px;
+    background-color: var(--ascent-blue-colour);
+    color: var(--alt-white-colour)}
+.btn.modal:hover{box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    cursor: pointer;}
 /* Чем мы занимаемся */
 .work {
     width: 1200px;
@@ -232,6 +271,23 @@ background-image: url(/img/svg/icons/envelope.svg);}
     display: inline-block;
     margin-right: 30px;
 }
+.prod{position: relative;
+height: 294px;}
+.prod-tittle{
+    position: absolute;
+    bottom: 0%;
+    width: 100%;
+    padding-top: 27px;
+    padding-bottom: 27px;
+    margin-bottom: 0px;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    text-align: center;
+    text-transform: uppercase;
+    background: rgba(47, 48, 58, 0.8);
+    color: var(--alt-white-colour);}
+
 .work .tittle {
     color: var(--black-colour);
     font-weight: 700;
@@ -267,6 +323,7 @@ background-image: url(/img/svg/icons/envelope.svg);}
 }
 .card-ul li:last-child{margin-right: 0px;}
 .card {
+    position: relative;
     width: 270px;
     height: 428px;
     background: #FFFFFF;
@@ -291,6 +348,14 @@ background-image: url(/img/svg/icons/envelope.svg);}
     text-align: center;
     color: var(--primary-grey-colour);
 }
+.social-link{
+    position: absolute;
+    bottom: 0%;
+    height: 44px;
+    width: 206px;
+    margin-left: 32px;
+    margin-bottom: 30px;
+    background-color: brown;}
 
 /*Постояные клиенты*/
 .clients{display: flex;
@@ -336,7 +401,8 @@ footer {
     line-height: 24px;
     letter-spacing: 0.03em;
     color: var(--primary-grey-colour);}
-.social{display:block;
+.social{position: relative;
+    display:block;
     margin-top: 72px;
     margin-left: 70px;
     font-weight: 700;
@@ -345,9 +411,6 @@ footer {
     letter-spacing: 0.03em;
     text-transform: uppercase;
     color: var(--alt-white-colour);}
-.footer-second{
-    
-}
 .footer-logo {
     display: block;
     margin-left: 255px;
@@ -372,6 +435,7 @@ footer {
     margin-left: 215px;
 }
 .cardfolio {
+    position: relative;
     width: 370px;
     height: 404px;
     background: #FFFFFF;
@@ -379,13 +443,35 @@ footer {
     /* material shadow v1 */
     border-radius: 0px 0px 4px 4px;
     border: 1px solid #EEEEEE;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
 }
+.thumb::before{content: '';
+display: inline-block;
+position: absolute;
+width: 100%;
+height: 100%;
+background-color: rgba(200, 150, 0, 0.5);}
+.thumb{position: relative;}
+.overlay{
+    position: absolute;
+    top: 0%;
+    padding-left: 24px;
+    padding-bottom: 63px;
+    padding-top: 63px;
+    margin: 0;    
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 28px;
+    opacity: 0;
+    color: #FFFFFF;}
 .cardfolio:nth-child(3n){margin-right: 0px;}
 .cardfolio:not(:nth-child(3n)) {
     margin-bottom: 30px;
 }
-.cardfolio:hover {
-    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+.cardfolio:hover .overlay { 
+    opacity: 1;
+    background-color: rgba(33, 150, 243, 0.9);
+    transition: 300ms;
     cursor: pointer;
 }
 .product{
@@ -404,8 +490,8 @@ footer {
     color: var(--primary-grey-colour);
 }
 .product .tittle {
-    font-weight: 500;
-    font-size: 16px;
+    font-weight: 700;
+    font-size: 18px;
     line-height: 1.18;
     margin-left: 24px;
     margin-top: 20px;
@@ -418,11 +504,14 @@ footer {
     width: 611px;
     height: 54px;
     margin-left: 305px;
-        
+    padding: 0px;        
 }
-.filter .list{margin-right: 8px;
-    padding: 0px;}
-    .filter .link {padding: 10px}
+.filter .list{margin-right: 8px;}
+    .filter .link {
+        padding-top: 8px;
+        padding-left: 22px;
+        padding-bottom: 8px;
+        padding-right: 22px; }
     .filter .link:last-child{margin-right: 0px;}
 .filter li {
     display: inline-block;
