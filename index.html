@@ -33,12 +33,9 @@
             <div class="backdrop is-hidden" data-backdrop>
                 <div class="modal">
                     <p>
-                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
-                        Aspernatur quas voluptatum quasi neque itaque impedit sequi rem 
-                        atque, quod labore nesciunt fuga, veritatis dicta dolorum cumque 
-                        voluptas repellat. Mollitia, blanditiis.
+                        Lorem ipsum dolor sit, a
                     </p>
-                    <button class="btn primary" data-close-modal>Отправить</button>
+                    <button class="btn modal" data-close-modal>Отправить</button>
                 </div>
             </div>
             <script>
@@ -51,12 +48,8 @@
                     refs.closeModalBtn.addEventListener("click",toggleModal);
                     refs.backdrop.addEventListener("click",logBackdropClick);
                 
-                function toggleModal(){
-                    refs.backdrop.classList.toggle("is-hidden");
-                }
-                function logBackdropClick(){
-                    console.log("клик в бекдроп");
-                }
+                function toggleModal(){refs.backdrop.classList.toggle("is-hidden");}
+                function logBackdropClick(){console.log("клик в бекдроп")}
             </script>
         </section>
         <section class="features">
